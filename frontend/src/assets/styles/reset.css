@@ -26,7 +26,7 @@ body {
 	line-height: 1;
 	background-color: #292929;
 	font-family: "Roboto Flex Normal";
-	height: 100vh;
+	min-height:100%;
 }
 ol, ul {
 	list-style: none;
@@ -42,4 +42,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+html {
+    height: 100%;
 }

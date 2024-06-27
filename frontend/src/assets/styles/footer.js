@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterStyle = styled.div`
 background-color: #D9D9D9;
 width: 100%;
-height: 50px;
+height: 80px;
 display: flex;
 align-items: center;
 justify-content: space-around;
