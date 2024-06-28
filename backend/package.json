@@ -145,7 +145,8 @@
     "yallist": "^4.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "sequelize-cli": "^6.6.2"
   },
   "scripts": {
     "dev": "node app.js",
