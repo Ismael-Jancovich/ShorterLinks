@@ -5,7 +5,7 @@ async function createUser(req, res) {
     console.log(newUser);
     try{
      const hashedPassword = await bcrypt.hash(newUser.password, 10);
-     await User.create({...newUser, password: hashedPassword});
+     await users.create({...newUser, password: hashedPassword});
      res.status (201).json ({message: 'Successfully created user'})
     } catch (error) {
       console.log(error);
@@ -16,11 +16,11 @@ async function createUser(req, res) {
 const loginUser = async(req, res) => {
     const {mail, password} = req.body;
     try {
-        const user = await User.findOne({where: {mail} });
-        if (!user) {
+        const users = await users.findOne({where: {mail} });
+        if (!users) {
             return res.status(404).json({message: 'User not found'});
         }
-        const isPasswordValid = await bcrypt.compare(password, user.password);
+        const isPasswordValid = await bcrypt.compare(password, users.password);
         if (!isPasswordValid) {
             return res.status(400).json({message: 'Incorrect password'})
         }   

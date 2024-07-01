@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     id_galery:{
       type: DataTypes.INTEGER,
       autoIncrement: true,
-      primaryKey: true
+      primaryKey: true,
+      allowNull: true
     },
     urls: DataTypes.STRING(255),
     transform_url: DataTypes.STRING(255)

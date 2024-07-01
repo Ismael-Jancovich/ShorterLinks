@@ -3,20 +3,17 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('galeries', {
-      id: {
+      id_galery: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstName: {
-        type: Sequelize.STRING
+      urls:  {
+         type: Sequelize.STRING(255)
       },
-      lastName: {
-        type: Sequelize.STRING
-      },
-      email: {
-        type: Sequelize.STRING
+      transform_url: {
+        type: Sequelize.STRING(255)
       },
       createdAt: {
         allowNull: false,
@@ -32,3 +29,8 @@ module.exports = {
     await queryInterface.dropTable('galeries');
   }
 };
+
+
+transform_url: DataTypes.STRING(255)
+transform_url: DataTypes.STRING(255)
+transform_url: DataTypes.STRING(255)
